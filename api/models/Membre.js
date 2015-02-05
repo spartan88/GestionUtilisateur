@@ -9,15 +9,20 @@ module.exports = {
     
   
   attributes: {
-
-
+      
+    mem_id: {
+        type: 'integer',
+        primaryKey: true,
+        required: true,
+        unique: true,
+    },
     mem_pseudo: {
         type: 'string',
         required: true,
         unique: true,
     },
     mem_mdp: {
-        type: 'text',
+        type: 'string',
         required: true,
     },
     mem_mail: {
@@ -26,11 +31,11 @@ module.exports = {
         unique: true
     },
     mem_nom: {
-        type: 'text',
+        type: 'string',
         required: true,
     },
     mem_prenom: {
-        type: 'text',
+        type: 'string',
         required: true,
     },
     mem_date_naissance: {
@@ -46,24 +51,25 @@ module.exports = {
         required: true,
     },
     mem_cp: {
-        type: 'text',
+        type: 'string',
         required: true,
     },
     mem_ville: {
-        type: 'text',
+        type: 'string',
         required: true,
     },
     mem_ip: {
-        type: 'text',
+        type: 'string',
         required: true,
-        unique: true
+        unique: true,
+        length: 12
     },
     mem_facebook: {
-        type: 'text',
+        type: 'string',
         required: true,
     },
     mem_twitter: {
-        type: 'text',
+        type: 'string',
         required: true,
     },
     mem_xp: {
