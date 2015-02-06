@@ -1,64 +1,92 @@
-<form>
-    
-  <div class="form-group">
-    <label for="pseudo">Pseudo</label>
-    <input type="text" class="form-control" id="pseudo" placeholder="Enter pseudo">
-  </div>
-    
-  <div class="form-group">
-    <label for="mdp">Mot de passe</label>
-    <input type="password" class="form-control" id="mdp" placeholder="Mot de passe">
-  </div>
-    
-  <div class="form-group">
-    <label for="nom">Nom</label>
-    <input type="text" class="form-control" id="nom" placeholder="Nom">
-  </div>
-    
-  <div class="form-group">
-    <label for="prenom">Prenom</label>
-    <input type="text" class="form-control" id="prenom" placeholder="Prenom">
-  </div>
-    
-  <div class="form-group">
-    <label for="mail">Mail</label>
-    <input type="email" class="form-control" id="mail" placeholder="Mail">
-  </div>
-    
-  <div class="form-group">
-    <label for="dateNaiss">Date de Naissance</label>
-    <input type="text" class="form-control" id="dateNaiss" placeholder="Date de Naissance">
-  </div>
-    
-  <div class="form-group">
-    <label for="Adresse1">Adresse 1</label>
-    <textarea class="form-control" rows="3"></textarea>>
-  </div>  
-    
-  <div class="form-group">
-    <label for="Adresse2">Adresse 2</label>
-    <textarea class="form-control" rows="3"></textarea>>
-  </div> 
-    
-  <div class="form-group">
-    <label for="cp">Code Postale</label>
-    <input type="text" class="form-control" id="cp" placeholder="Code postale">
-  </div>
-    
-  <div class="form-group">
-    <label for="ville">Ville</label>
-    <input type="text" class="form-control" id="dateNaiss" placeholder="Ville">
-  </div>
-    
-  <div class="form-group">
-    <label for="facebook">Facebook</label>
-    <input type="text" class="form-control" id="facebook" placeholder="Facebook">
-  </div>  
-    
-  <div class="form-group">
-    <label for="twitter">Twitter</label>
-    <input type="text" class="form-control" id="twitter" placeholder="Twitter">
-  </div>    
+<div class="center-block">
+    <form class="form-horizontal" action='' method='POST'>
 
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+      <div class="form-group">
+        <div class="col-xs-4">
+            <label for="pseudo">Pseudo</label>
+            <input type="text" class="form-control" id="pseudo" placeholder="Enter pseudo">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-4">
+            <label for="mdp">Mot de passe</label>
+            <input type="password" class="form-control" id="mdp" placeholder="Mot de passe">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-4"> 
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" id="nom" placeholder="Nom">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-4">
+            <label for="prenom">Prenom</label>
+            <input type="text" class="form-control" id="prenom" placeholder="Prenom">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-4">
+            <label for="mail">Mail</label>
+            <input type="email" class="form-control" id="mail" placeholder="Mail">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-4">
+            <label for="dateNaiss">Date de Naissance</label>
+            <input type="text" class="form-control" id="dateNaiss" placeholder="Date de Naissance">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-6">
+            <label for="Adresse1">Adresse 1</label>
+            <textarea class="form-control" rows="3"></textarea>
+        </div>
+      </div>  
+
+      <div class="form-group">
+        <div class="col-xs-6">
+            <label for="Adresse2">Adresse 2</label>
+            <textarea class="form-control" rows="3"></textarea>
+        </div>
+      </div> 
+
+      <div class="form-group">
+        <div class="col-xs-4">
+            <label for="cp">Code Postale</label>
+            <input type="text" class="form-control" id="cp" placeholder="Code postale">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-4">
+            <label for="ville">Ville</label>
+            <input type="text" class="form-control" id="dateNaiss" placeholder="Ville">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-xs-8">
+            <label for="facebook">Facebook</label>
+            <input type="url" class="form-control" id="facebook" placeholder="Facebook">
+        </div>    
+      </div>  
+
+      <div class="form-group">
+        <div class="col-xs-8">
+            <label for="twitter">Twitter</label>
+            <input type="url" class="form-control" id="twitter" placeholder="Twitter">
+        </div>
+      </div>    
+
+      <button type="submit" class="btn btn-primary">Ajouter</button>
+      <button type="reset" class="btn btn-danger">Annuler</button>
+      <input type="hidden" name="_csrf" value="<%= _csrf %>">
+    </form>
+</div>

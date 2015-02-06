@@ -55,7 +55,7 @@ module.exports.routes = {
 	action: 'ajouter'
   },
   
-'/modifier': {
+  '/modifier': {
     	controller: 'MembreController',
 	action: 'modifier'
   }
