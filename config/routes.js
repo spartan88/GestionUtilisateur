@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'User/index'
-  }
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -45,5 +45,13 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  '/lister': {
+    view: 'User/liste'
+  },
+  
+    '/ajouter': {
+    view: 'User/ajouter'
+  }
+
 
 };

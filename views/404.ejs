@@ -51,18 +51,15 @@
 
       <div class="main">
         <h1>
-          Something's fishy here.
+          Page Introuvable !
         </h1>
         <h2>
-        	<% if (typeof error!== 'undefined') { %>
-          <%= error %>
+          <% if (typeof error!== 'undefined') { %>
+                <%= error %>
           <% } else { %>
-          The page you were trying to reach doesn't exist.
+                Cette page n'existe pas.
           <% } %>
         </h2>
-        <p class="help">
-          <a href="http://en.wikipedia.org/wiki/HTTP_404">Why</a> might this be happening?
-        </p>
       </div>
 
       <div class="logo">
