@@ -28,7 +28,8 @@ module.exports = {
     mem_mail: {
         type: 'email',
         required: true,
-        unique: true
+        unique: true,
+        email: true
     },
     mem_nom: {
         type: 'string',

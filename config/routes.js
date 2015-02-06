@@ -33,7 +33,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'User/index'
+    view: 'Membre/index'
   },
 
   /***************************************************************************
@@ -46,12 +46,18 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   '/lister': {
-    view: 'User/liste'
+        controller: 'MembreController',
+	action: 'lister'
   },
   
-    '/ajouter': {
-    view: 'User/ajouter'
+  '/ajouter': {
+    	controller: 'MembreController',
+	action: 'ajouter'
+  },
+  
+'/modifier': {
+    	controller: 'MembreController',
+	action: 'modifier'
   }
-
 
 };
