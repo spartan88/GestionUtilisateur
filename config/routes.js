@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
+  '/menbre': {
     view: 'Membre/index'
   },
 
@@ -45,17 +45,17 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  '/lister': {
+  '/menbre/lister': {
         controller: 'MembreController',
 	action: 'lister'
   },
   
-  '/ajouter': {
+  '/menbre/ajouter': {
     	controller: 'MembreController',
 	action: 'ajouter'
   },
   
-  '/modifier': {
+  '/menbre/modifier': {
     	controller: 'MembreController',
 	action: 'modifier'
   }
