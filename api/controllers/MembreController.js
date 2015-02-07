@@ -13,6 +13,8 @@ module.exports = {
             //On fait une copie de cette erreur
             req.locals.flash = _.clone(req.session.flash);
 
+
+req.locals.flash = _.clone(req.session.flash);
             //En appelant la vue "ajouter.ejs" dans le dossier "view/Membre"
             //et que l'action du controlleur s'appelle "ajouter"
             //Pas besoin de fournir de parametres à res.view()
