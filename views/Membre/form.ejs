@@ -1,13 +1,5 @@
 <div class="center-block">
     <form class="form-horizontal" action='/membre/create' method='POST'>
-
-      <% if( req.session.flash && req.session.flash.err ){ %>
-        <ul class="alert alert-success">
-            <% Object.keys(flash.err).forEach(function(error){ %>
-             <li><%- JSON.stringify(flash.err[error]) %></li>
-            <% }) %>
-        </ul>
-      <% } %>
      
       <div class="form-group">
         <div class="col-xs-4">

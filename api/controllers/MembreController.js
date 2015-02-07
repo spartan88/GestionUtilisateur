@@ -9,16 +9,7 @@ module.exports = {
 	
         //Affiche le formiulaire d'ajout utilisateur
 	ajouter: function(req, res) {
-                               
-            //On fait une copie de cette erreur
-            req.locals.flash = _.clone(req.session.flash);
-    
-            //En appelant la vue "ajouter.ejs" dans le dossier "view/Membre"
-            //et que l'action du controlleur s'appelle "ajouter"
-            //Pas besoin de fournir de parametres à res.view()
 	    res.view();
-            //On remet le message d'erreur à vide
-            req.session.flash = {};
 	},
         
         //Ajout d'un utilisateur
@@ -34,19 +25,12 @@ module.exports = {
                 if(err) {
                     //On affiche l'erreur sur notre consol NodeJs
                    console.log(err);
-                   
-                   //On récupére l'erreur pour la retourner dans notre vue
-                   req.session.flash = {
-                      erreur: err
-                   }
-                
+                                   
                    //On redirige vers notre formulaire
                    res.redirect("/membre/ajouter");                   
                 }
                 
                 res.json(membre);
-                //On remet le message d'erreur à vide si tous c'est bien passé
-                req.session.flash = {};
             });     
         },
         
