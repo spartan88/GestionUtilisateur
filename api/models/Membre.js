@@ -105,6 +105,16 @@ module.exports = {
         defaultsTo: 0
     }
     
-  }
+  },
+       
+
+  beforeValidate: function(values, cb) {
+
+       // Add my custom validation logic here.
+
+       cb();
+
+   }
+   
 };
 
