@@ -7,31 +7,20 @@
 
 module.exports = {
 	
-        //Affiche le formiulaire d'ajout utilisateur
+  //Affiche le formiulaire d'ajout utilisateur
 	ajouter: function(req, res) {
-<<<<<<< HEAD
-                               
-           //On donne l'erreur à la response pour l'afficher à l'utilisateur
-            //res.locals.flash = _.clone(req.session.flash);
+
 
             //En appelant la vue "ajouter.ejs" dans le dossier "view/Membre"
             //et que l'action du controlleur s'appelle "ajouter"
             //Pas besoin de fournir de parametres à res.view()
 	          res.view();
 
-            //On remet le message d'erreur à vide
-           // req.session.flash = {};
-	},
+	},      
         
   //Ajout d'un utilisateur
   create : function (req, res, next){
-=======
-	    res.view();
-	},
-        
-        //Ajout d'un utilisateur
-        create : function (req, res, next){
->>>>>>> 7ec64219bd33b2f25b1f29a96b016ebd8402178a
+
         
             req.connection.remoteAddress;
            
@@ -42,15 +31,13 @@ module.exports = {
                 // Erreur de validation suivant les critéres définit dans notre modéle
                 if(err) {
                     //On affiche l'erreur sur notre consol NodeJs
-<<<<<<< HEAD
-                   //console.log(err);
+                   console.log(err);
                    
                    //On récupére l'erreur pour la retourner dans notre vue
                    req.session.flash = {
                       erreur: 'Une erreur s\'est produite lors de la création du Membre'
                    }              
-
-                  //return res.badRequest(err);
+     
                    //On redirige vers notre formulaire
                    return res.redirect("/membre/ajouter");                   
                 }
@@ -60,24 +47,14 @@ module.exports = {
                 req.session.flash = {};
             });     
   },
-=======
-                   console.log(err);
-                                   
-                   //On redirige vers notre formulaire
-                   res.redirect("/membre/ajouter");                   
-                }
-                
-                res.json(membre);
-            });     
-        },
->>>>>>> 7ec64219bd33b2f25b1f29a96b016ebd8402178a
+
         
-        //Liste de tous les utilisateurs
+  //Liste de tous les utilisateurs
 	lister: function(req, res) {	
 	    res.view();
 	},
         
-        //Modifier un utilisateur
+  //Modifier un utilisateur
 	modifier: function(req, res) {	
 	    res.view();
 	}
