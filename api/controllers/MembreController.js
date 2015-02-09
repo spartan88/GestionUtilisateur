@@ -7,13 +7,20 @@
 
 module.exports = {
 	
-        //Affiche le formiulaire d'ajout utilisateur
+  //Affiche le formiulaire d'ajout utilisateur
 	ajouter: function(req, res) {
-	    res.view();
-	},
+
+
+            //En appelant la vue "ajouter.ejs" dans le dossier "view/Membre"
+            //et que l'action du controlleur s'appelle "ajouter"
+            //Pas besoin de fournir de parametres à res.view()
+	          res.view();
+
+	},      
         
-        //Ajout d'un utilisateur
-        create : function (req, res, next){
+  //Ajout d'un utilisateur
+  create : function (req, res, next){
+
         
             req.connection.remoteAddress;
            
@@ -25,21 +32,29 @@ module.exports = {
                 if(err) {
                     //On affiche l'erreur sur notre consol NodeJs
                    console.log(err);
-                                   
+                   
+                   //On récupére l'erreur pour la retourner dans notre vue
+                   req.session.flash = {
+                      erreur: 'Une erreur s\'est produite lors de la création du Membre'
+                   }              
+     
                    //On redirige vers notre formulaire
-                   res.redirect("/membre/ajouter");                   
+                   return res.redirect("/membre/ajouter");                   
                 }
                 
                 res.json(membre);
+                //On remet le message d'erreur à vide si tous c'est bien passé
+                req.session.flash = {};
             });     
-        },
+  },
+
         
-        //Liste de tous les utilisateurs
+  //Liste de tous les utilisateurs
 	lister: function(req, res) {	
 	    res.view();
 	},
         
-        //Modifier un utilisateur
+  //Modifier un utilisateur
 	modifier: function(req, res) {	
 	    res.view();
 	}
