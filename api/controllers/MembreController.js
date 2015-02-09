@@ -9,6 +9,7 @@ module.exports = {
 	
         //Affiche le formiulaire d'ajout utilisateur
 	ajouter: function(req, res) {
+<<<<<<< HEAD
                                
            //On donne l'erreur à la response pour l'afficher à l'utilisateur
             //res.locals.flash = _.clone(req.session.flash);
@@ -24,6 +25,13 @@ module.exports = {
         
   //Ajout d'un utilisateur
   create : function (req, res, next){
+=======
+	    res.view();
+	},
+        
+        //Ajout d'un utilisateur
+        create : function (req, res, next){
+>>>>>>> 7ec64219bd33b2f25b1f29a96b016ebd8402178a
         
             req.connection.remoteAddress;
            
@@ -34,6 +42,7 @@ module.exports = {
                 // Erreur de validation suivant les critéres définit dans notre modéle
                 if(err) {
                     //On affiche l'erreur sur notre consol NodeJs
+<<<<<<< HEAD
                    //console.log(err);
                    
                    //On récupére l'erreur pour la retourner dans notre vue
@@ -51,6 +60,17 @@ module.exports = {
                 req.session.flash = {};
             });     
   },
+=======
+                   console.log(err);
+                                   
+                   //On redirige vers notre formulaire
+                   res.redirect("/membre/ajouter");                   
+                }
+                
+                res.json(membre);
+            });     
+        },
+>>>>>>> 7ec64219bd33b2f25b1f29a96b016ebd8402178a
         
         //Liste de tous les utilisateurs
 	lister: function(req, res) {	

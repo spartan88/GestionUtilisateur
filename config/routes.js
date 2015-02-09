@@ -31,10 +31,13 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
+<<<<<<< HEAD
   '/': {
     view: 'index'
   },
   
+=======
+>>>>>>> 7ec64219bd33b2f25b1f29a96b016ebd8402178a
 
   '/menbre': {
     view: 'Membre/index'
@@ -50,18 +53,31 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   '/menbre/lister': {
+<<<<<<< HEAD
       controller: 'MembreController',
 	    action: 'lister'
+=======
+        controller: 'MembreController',
+	action: 'lister'
+>>>>>>> 7ec64219bd33b2f25b1f29a96b016ebd8402178a
   },
   
   '/menbre/ajouter': {
     	controller: 'MembreController',
+<<<<<<< HEAD
 	    action: 'ajouter'
+=======
+	action: 'ajouter'
+>>>>>>> 7ec64219bd33b2f25b1f29a96b016ebd8402178a
   },
   
   '/menbre/modifier': {
     	controller: 'MembreController',
+<<<<<<< HEAD
 	    action: 'modifier'
+=======
+	action: 'modifier'
+>>>>>>> 7ec64219bd33b2f25b1f29a96b016ebd8402178a
   }
 
 };
